@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Mazzard Soft';
+  font-family: 'MazzardSoftM';
   src: url('../public/fonts/MazzardSoftM-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
@@ -11,7 +11,7 @@
 }
 
 @font-face {
-  font-family: 'Mazzard Soft';
+  font-family: 'MazzardSoftM';
   src: url('../public/fonts/MazzardSoftM-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-  font-family: 'Mazzard Soft';
+  font-family: 'MazzardSoftM';
   src: url('../public/fonts/MazzardSoftM-SemiBold.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
@@ -27,7 +27,7 @@
 }
 
 @font-face {
-  font-family: 'Mazzard Soft';
+  font-family: 'MazzardSoftM';
   src: url('../public/fonts/MazzardSoftM-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
@@ -35,7 +35,7 @@
 }
 
 @font-face {
-  font-family: 'Mazzard Soft';
+  font-family: 'MazzardSoftM';
   src: url('../public/fonts/MazzardSoftM-Italic.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
@@ -43,7 +43,7 @@
 }
 
 @font-face {
-  font-family: 'Mazzard Soft';
+  font-family: 'MazzardSoftM';
   src: url('../public/fonts/MazzardSoftM-MediumItalic.otf') format('opentype');
   font-weight: 500;
   font-style: italic;
@@ -51,7 +51,7 @@
 }
 
 @font-face {
-  font-family: 'Mazzard Soft';
+  font-family: 'MazzardSoftM';
   src: url('../public/fonts/MazzardSoftM-SemiBoldItalic.otf') format('opentype');
   font-weight: 600;
   font-style: italic;
@@ -59,7 +59,7 @@
 }
 
 @font-face {
-  font-family: 'Mazzard Soft';
+  font-family: 'MazzardSoftM';
   src: url('../public/fonts/MazzardSoftM-BoldItalic.otf') format('opentype');
   font-weight: 700;
   font-style: italic;

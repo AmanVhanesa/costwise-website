@@ -21,7 +21,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Mazzard Soft', 'sans-serif'],
+        sans: ['MazzardSoftM', 'sans-serif'],
       },
     },
   },

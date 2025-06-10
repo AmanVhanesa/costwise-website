@@ -207,8 +207,16 @@ function App() {
               className="rounded-lg overflow-hidden shadow-xl"
             >
               {appScreenshots.map((src, index) => (
-                <div key={index}>
-                  <img src={src} alt={`App Screenshot ${index + 1}`} className="w-full h-auto object-contain" />
+                <div key={index} className="relative">
+                  <img 
+                    src={src} 
+                    alt={`App Screenshot ${index + 1}`} 
+                    className="w-full h-auto object-contain"
+                    onError={(e) => {
+                      console.error(`Failed to load image: ${src}`);
+                      e.currentTarget.src = './logo.png'; // Fallback image
+                    }}
+                  />
                 </div>
               ))}
             </Carousel>
