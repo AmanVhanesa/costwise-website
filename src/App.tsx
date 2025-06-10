@@ -46,16 +46,16 @@ const benefits = [
 
 // App screenshot image sources (local paths - make sure these files exist in public/screenshots)
 const appScreenshots = [
-  '/costwise-website/screenshots/screenshot1.png',
-  '/costwise-website/screenshots/screenshot2.png',
-  '/costwise-website/screenshots/screenshot3.png',
-  '/costwise-website/screenshots/screenshot4.png',
-  '/costwise-website/screenshots/screenshot5.png',
-  '/costwise-website/screenshots/screenshot6.png',
-  '/costwise-website/screenshots/screenshot7.png',
-  '/costwise-website/screenshots/screenshot8.png',
-  '/costwise-website/screenshots/screenshot9.png',
-  '/costwise-website/screenshots/screenshot10.png',
+  './screenshots/screenshot1.png',
+  './screenshots/screenshot2.png',
+  './screenshots/screenshot3.png',
+  './screenshots/screenshot4.png',
+  './screenshots/screenshot5.png',
+  './screenshots/screenshot6.png',
+  './screenshots/screenshot7.png',
+  './screenshots/screenshot8.png',
+  './screenshots/screenshot9.png',
+  './screenshots/screenshot10.png',
 ];
 
 const fadeInUp = {

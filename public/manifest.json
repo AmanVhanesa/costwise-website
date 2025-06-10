@@ -3,7 +3,7 @@
   "short_name": "Costwise",
   "icons": [
     {
-      "src": "/favicon.png",
+      "src": "./favicon.png",
       "sizes": "192x192",
       "type": "image/png"
     }
