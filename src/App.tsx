@@ -214,7 +214,7 @@ function App() {
                     className="w-full h-auto object-contain"
                     onError={(e) => {
                       console.error(`Failed to load image: ${src}`);
-                      e.currentTarget.src = './logo.png'; // Fallback image
+                      e.currentTarget.style.display = 'none';
                     }}
                   />
                 </div>
