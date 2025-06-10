@@ -97,7 +97,7 @@ function App() {
             className="text-center"
           >
             <motion.img
-              src="/costwise-website/logo.png"
+              src="./logo.png"
               alt="Costwise Logo"
               className="mx-auto mb-8 h-16 rounded-lg shadow-md"
               initial={{ scale: 0.8, opacity: 0 }}
@@ -262,7 +262,7 @@ function App() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
               <motion.img
-                src="/costwise-website/logo.png"
+                src="./logo.png"
                 alt="Costwise Logo"
                 className="h-12 mb-4 rounded-lg shadow-md"
                 whileHover={{ scale: 1.05 }}
