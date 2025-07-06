@@ -280,13 +280,6 @@ function App() {
                 </div>
               ))}
             </Carousel>
-            {/* Debug info */}
-            <div className="mt-4 p-4 bg-gray-100 rounded-lg text-sm">
-              <p className="font-bold">Debug Info:</p>
-              <p>Total screenshots: {appScreenshots.length}</p>
-              <p>First screenshot path: {appScreenshots[0]}</p>
-              <p>Current URL: {window.location.href}</p>
-            </div>
           </div>
         </div>
       </section>
