@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'MazzardSoftM';
+  src: url('/fonts/MazzardSoftM-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MazzardSoftM';
+  src: url('/fonts/MazzardSoftM-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MazzardSoftM';
+  src: url('/fonts/MazzardSoftM-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MazzardSoftM';
+  src: url('/fonts/MazzardSoftM-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MazzardSoftM';
+  src: url('/fonts/MazzardSoftM-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MazzardSoftM';
+  src: url('/fonts/MazzardSoftM-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MazzardSoftM';
+  src: url('/fonts/MazzardSoftM-SemiBoldItalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MazzardSoftM';
+  src: url('/fonts/MazzardSoftM-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Fallback fonts */
+body {
+  font-family: 'MazzardSoftM', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+} 

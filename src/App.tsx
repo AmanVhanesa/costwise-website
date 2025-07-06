@@ -11,6 +11,8 @@ import {
 } from '@heroicons/react/24/outline';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // import carousel styles
+import { useEffect } from 'react';
+import './fonts.css'; // Import custom fonts
 
 const features = [
   {
@@ -44,18 +46,18 @@ const benefits = [
   'Offline mode available'
 ];
 
-// App screenshot image sources (local paths - make sure these files exist in public/screenshots)
+// App screenshot image sources (using public URLs)
 const appScreenshots = [
-  'screenshots/screenshot1.png',
-  'screenshots/screenshot2.png',
-  'screenshots/screenshot3.png',
-  'screenshots/screenshot4.png',
-  'screenshots/screenshot5.png',
-  'screenshots/screenshot6.png',
-  'screenshots/screenshot7.png',
-  'screenshots/screenshot8.png',
-  'screenshots/screenshot9.png',
-  'screenshots/screenshot10.png',
+  '/screenshots/screenshot1.png',
+  '/screenshots/screenshot2.png',
+  '/screenshots/screenshot3.png',
+  '/screenshots/screenshot4.png',
+  '/screenshots/screenshot5.png',
+  '/screenshots/screenshot6.png',
+  '/screenshots/screenshot7.png',
+  '/screenshots/screenshot8.png',
+  '/screenshots/screenshot9.png',
+  '/screenshots/screenshot10.png',
 ];
 
 const fadeInUp = {
@@ -79,6 +81,55 @@ const scaleIn = {
 };
 
 function App() {
+  useEffect(() => {
+    // Check if fonts are loaded
+    document.fonts.ready.then(() => {
+      console.log('Fonts loaded:', document.fonts.check('12px MazzardSoftM'));
+      console.log('Available fonts:', document.fonts);
+    });
+    
+    // Check if images exist
+    appScreenshots.forEach((src, index) => {
+      console.log(`Testing image ${index + 1}:`, src);
+      const img = new Image();
+      img.onload = () => console.log(`✅ Image ${index + 1} loaded successfully:`, src);
+      img.onerror = () => console.error(`❌ Image ${index + 1} failed to load:`, src);
+      img.src = src;
+    });
+    
+    // Test logo
+    console.log('Testing logo:', '/logo.png');
+    const logoImg = new Image();
+    logoImg.onload = () => console.log('✅ Logo loaded successfully:', '/logo.png');
+    logoImg.onerror = () => console.error('❌ Logo failed to load:', '/logo.png');
+    logoImg.src = '/logo.png';
+    
+    // Test if we can fetch the assets
+    fetch('/screenshots/screenshot1.png')
+      .then(response => {
+        if (response.ok) {
+          console.log('✅ Screenshot 1 is accessible via fetch');
+        } else {
+          console.error('❌ Screenshot 1 is not accessible via fetch:', response.status);
+        }
+      })
+      .catch(error => {
+        console.error('❌ Error fetching screenshot 1:', error);
+      });
+      
+    fetch('/fonts/MazzardSoftM-Regular.otf')
+      .then(response => {
+        if (response.ok) {
+          console.log('✅ Font is accessible via fetch');
+        } else {
+          console.error('❌ Font is not accessible via fetch:', response.status);
+        }
+      })
+      .catch(error => {
+        console.error('❌ Error fetching font:', error);
+      });
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -97,7 +148,7 @@ function App() {
             className="text-center"
           >
             <motion.img
-              src="./logo.png"
+              src="/logo.png"
               alt="Costwise Logo"
               className="mx-auto mb-8 h-16 rounded-lg shadow-md"
               initial={{ scale: 0.8, opacity: 0 }}
@@ -109,6 +160,7 @@ function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
+              style={{ fontFamily: 'MazzardSoftM, sans-serif' }}
             >
               Costwise
             </motion.h1>
@@ -155,7 +207,7 @@ function App() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Powerful Features
+            Control Your Money Like Never Before
           </motion.h2>
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
@@ -215,11 +267,26 @@ function App() {
                     onError={(e) => {
                       console.error(`Failed to load image: ${src}`);
                       e.currentTarget.style.display = 'none';
+                      // Show a fallback message
+                      const fallback = document.createElement('div');
+                      fallback.className = 'flex items-center justify-center h-64 bg-gray-100 text-gray-500';
+                      fallback.textContent = `Screenshot ${index + 1} - Image not found`;
+                      e.currentTarget.parentNode?.appendChild(fallback);
+                    }}
+                    onLoad={() => {
+                      console.log(`Successfully loaded image: ${src}`);
                     }}
                   />
                 </div>
               ))}
             </Carousel>
+            {/* Debug info */}
+            <div className="mt-4 p-4 bg-gray-100 rounded-lg text-sm">
+              <p className="font-bold">Debug Info:</p>
+              <p>Total screenshots: {appScreenshots.length}</p>
+              <p>First screenshot path: {appScreenshots[0]}</p>
+              <p>Current URL: {window.location.href}</p>
+            </div>
           </div>
         </div>
       </section>
@@ -270,7 +337,7 @@ function App() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
               <motion.img
-                src="./logo.png"
+                src="/logo.png"
                 alt="Costwise Logo"
                 className="h-12 mb-4 rounded-lg shadow-md"
                 whileHover={{ scale: 1.05 }}
