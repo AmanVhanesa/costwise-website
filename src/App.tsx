@@ -46,18 +46,18 @@ const benefits = [
   'Offline mode available'
 ];
 
-// App screenshot image sources (using public URLs)
+// App screenshot image sources (using new names)
 const appScreenshots = [
-  '/screenshots/screenshot1.png',
-  '/screenshots/screenshot2.png',
-  '/screenshots/screenshot3.png',
-  '/screenshots/screenshot4.png',
-  '/screenshots/screenshot5.png',
-  '/screenshots/screenshot6.png',
-  '/screenshots/screenshot7.png',
-  '/screenshots/screenshot8.png',
-  '/screenshots/screenshot9.png',
-  '/screenshots/screenshot10.png',
+  '/screenshots/img1.png',
+  '/screenshots/img2.png',
+  '/screenshots/img3.png',
+  '/screenshots/img4.png',
+  '/screenshots/img5.png',
+  '/screenshots/img6.png',
+  '/screenshots/img7.png',
+  '/screenshots/img8.png',
+  '/screenshots/img9.png',
+  '/screenshots/img10.png',
 ];
 
 const fadeInUp = {
